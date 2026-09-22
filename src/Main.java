@@ -3,6 +3,14 @@ import java.util.*;
 public class Main {
     public static void main(String[] args){
 
+        UserManager manager = new UserManager();
+        manager.createUser(1, "Patrick", "patrick@gmail.com", "feliz123");
+        manager.createUser(2, "Ingrid", "ingrid@gmail.com", "zikadopantano");
+        manager.createUser(3, "Vitoria", "vitoria@hotmail.com", "escandaloxd");
+
+        User foundUser = manager.getElementById(2);
+        System.out.println(foundUser.getName());
+
         Scanner scanner = new Scanner(System.in);
         boolean programRunning = true;
 

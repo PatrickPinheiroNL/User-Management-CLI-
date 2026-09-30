@@ -8,7 +8,6 @@ This project is being developed incrementally as part of my Java backend learnin
 
 * Create users
 * List users
-* Find users by ID
 * Update users
 * Delete users
 * In-memory data storage

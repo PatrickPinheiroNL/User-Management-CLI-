@@ -5,6 +5,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         boolean programRunning = true;
+        User user = null;
 
         while(programRunning){
 
@@ -17,11 +18,28 @@ public class Main {
             System.out.println("4. Delete user");
             System.out.println("0. Exit");
 
-            System.out.println("Choose an option:");
+            System.out.print("Choose an option: ");
             int chooseOption = sc.nextInt();
+            sc.nextLine();
 
             switch (chooseOption){
                 case 1:
+                    System.out.println("------CREATING USER------");
+                    System.out.print("Enter ID: ");
+                    int id = sc.nextInt();
+                    sc.nextLine();
+
+                    System.out.print("Enter Name: ");
+                    String name = sc.nextLine();
+
+                    System.out.print("Enter Email: ");
+                    String email = sc.nextLine();
+
+                    user = new User(id, name, email);
+
+                    System.out.println(user.getId());
+                    System.out.println(user.getName());
+                    System.out.println(user.getEmail());
                     break;
                 case 2:
                     break;
